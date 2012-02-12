@@ -14,12 +14,12 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "peepshot"
-  gem.homepage = "http://github.com/toxboe/peepshot"
+  gem.name = "PeepShot"
+  gem.homepage = "https://github.com/PeepShot/peepshot"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "anders@toxboe.net"
+  gem.summary = %Q{PeepShot URL and view helpers}
+  gem.description = %Q{Use this plugin in your rails applications to capture thumbnail screenshots through the PeepShot API}
+  gem.email = "info@ui-patterns.com"
   gem.authors = ["Anders Toxboe"]
   # dependencies defined in Gemfile
 end
