@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "https://github.com/PeepShot/peepshot"
   gem.license = "MIT"
   gem.summary = %Q{PeepShot URL and view helpers}
-  gem.description = %Q{Use this plugin in your rails applications to capture thumbnail screenshots through the PeepShot API}
+  gem.description = %Q{Use this gem in your rails applications to capture thumbnail screenshots through the PeepShot API}
   gem.email = "info@ui-patterns.com"
   gem.authors = ["Anders Toxboe"]
   # dependencies defined in Gemfile

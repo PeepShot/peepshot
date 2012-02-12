@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = "peepshot"
-  s.version = ""
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anders Toxboe"]
   s.date = "2012-02-12"
-  s.description = "Use this plugin in your rails applications to capture thumbnail screenshots through the PeepShot API"
+  s.description = "Use this gem in your rails applications to capture thumbnail screenshots through the PeepShot API"
   s.email = "info@ui-patterns.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -22,10 +22,12 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md",
     "Rakefile",
+    "VERSION",
     "lib/peepshot.rb",
     "lib/peepshot/rails.rb",
     "lib/peepshot/rails/helpers.rb",
     "lib/peepshot/rails/helpers/image_tags.rb",
+    "peepshot.gemspec",
     "test/helper.rb",
     "test/test_peepshot.rb"
   ]
