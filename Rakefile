@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "PeepShot"
+  gem.name = "peepshot"
   gem.homepage = "https://github.com/PeepShot/peepshot"
   gem.license = "MIT"
   gem.summary = %Q{PeepShot URL and view helpers}
