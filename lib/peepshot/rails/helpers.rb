@@ -1,4 +1,5 @@
 require 'uri'
+require 'cgi'
 require 'digest'
 
 module PeepShot
@@ -16,7 +17,7 @@ module PeepShot
         token      = Digest::MD5.hexdigest(PeepShot.api_secret + url)
         dimensions = build_dimensions_string(options)
         
-        "http://#{host}/v1/#{PeepShot.api_key}/#{token}/#{dimensions}?url=#{URI.escape(foo)}"
+        URI.escape("http://#{host}/v1/#{PeepShot.api_key}/#{token}/#{dimensions}?url==#{CGI::escape(url)}")
       end
 
       def build_dimensions_string(options)
