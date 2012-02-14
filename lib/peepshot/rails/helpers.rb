@@ -16,7 +16,7 @@ module PeepShot
         token      = Digest::MD5.hexdigest(PeepShot.api_secret + url)
         dimensions = build_dimensions_string(options)
         
-        "http://#{host}/v1/#{PeepShot.api_key}/#{token}/#{dimensions}"
+        "http://#{host}/v1/#{PeepShot.api_key}/#{token}/#{dimensions}?url=#{URI.escape(foo)}"
       end
 
       def build_dimensions_string(options)
