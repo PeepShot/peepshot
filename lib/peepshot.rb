@@ -31,3 +31,5 @@ end
 require "peepshot/rails/helpers/image_tags"
 require "peepshot/rails/helpers"
 require "peepshot/rails"
+
+ActionView::Base.send :include, PeepShot::Rails::Helpers
