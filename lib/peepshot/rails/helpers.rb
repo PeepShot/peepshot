@@ -9,7 +9,7 @@ module PeepShot
       
       def peepshot_url(url, options)
         options = {:width => 200, 
-                   :height => nil,
+                   :height => nil
                    }.merge(options)
 
         host       = 'api.peepshot.com'
@@ -20,14 +20,14 @@ module PeepShot
       end
 
       def build_dimensions_string(options)
-        width = find width(options)
+        width = find_width(options)
         height = find_height(options)
 
         dimensions_string = height ? "#{width}x#{height}" : "#{width}"
         /[\dx]+|original/i =~ dimensions_string ? dimensions_string : raise_invalid_dimensions
       end
 
-      def find_width
+      def find_width(options)
         if options[:width].to_s.downcase == 'original'
           'original'
         elsif options[:width].to_i < 10
@@ -39,7 +39,7 @@ module PeepShot
         end
       end
       
-      def find_height
+      def find_height(options)
         if options[:height] && options[:height].to_i > 10 && options[:height].to_i < 2000
           options[:height].to_i
         else
