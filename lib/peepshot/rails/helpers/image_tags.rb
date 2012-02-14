@@ -3,8 +3,8 @@ module PeepShot
     module Helpers
       module ImageTags        
         def peepshot_image_tag(url, options)
-          width = get_width.to_s.downcase == 'original' ? 1024 : get_width
-          height = get_height
+          width = find_width.to_s.downcase == 'original' ? 1024 : find_width
+          height = find_height
           image_tag(peepshot_url(url, options), :width => width, :height => height)
         end
       end
