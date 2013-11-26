@@ -38,6 +38,16 @@ If you'd like to use peepshot in your own homebrewn way, you can skip the image 
 
     peepshot_url("http://ui-patterns.com", :width => 320)
 
+### Use a webservice (json or XML) to check if screenshot is ready
+
+If you're not interested in showing a "queued" message to your users, you can use the following method to check if the screenshot has been grabbed and is ready to be shown. It calls a webservice, so calling this method a hundred times on one page can be slow.
+
+    peepshot_image_ready?(url)
+
+For instance:
+
+    peepshot_image_ready?("http://ui-patterns.com")
+
 Installation
 ------------
 

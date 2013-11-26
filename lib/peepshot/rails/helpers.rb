@@ -1,4 +1,5 @@
 require 'uri'
+require 'open-uri'
 require 'cgi'
 require 'digest'
 
@@ -7,6 +8,17 @@ module PeepShot
     module Helpers
       class InvalidDimensions < Exception; end
       include ImageTags
+      
+      def peepshot_image_ready?(url)
+        host       = 'api.peepshot.com'
+        token      = Digest::MD5.hexdigest(PeepShot.api_secret + url)
+
+        url = URI.escape("http://#{host}/v1/#{PeepShot.api_key}/#{token}/ready?url=#{url}")
+
+        data = JSON.parse(open(url).read)
+
+        data['status'] == 'OK' ? true : false
+      end
       
       def peepshot_url(url, options)
         options = {:width => 200, 

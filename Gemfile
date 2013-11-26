@@ -6,4 +6,5 @@ group :development do
   gem "jeweler", "~> 1.5.2"
   gem "rcov", ">= 0"
   gem "rdoc"
+  gem "json"
 end
